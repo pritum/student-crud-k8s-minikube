@@ -13,3 +13,7 @@ spec:
         env:
         - name: DATABASE_URL
           value: "sqlite:////tmp/test.db"
+        - name: REDIS_HOST
+          value: "redis"
+        - name: REDIS_PORT
+          value: "6379"
