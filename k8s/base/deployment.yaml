@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-crud
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student-crud
+  template:
+    metadata:
+      labels:
+        app: student-crud
+    spec:
+      containers:
+      - name: student-crud
+        image: student-crud:latest
+        ports:
+        - containerPort: 8000

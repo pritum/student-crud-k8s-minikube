@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-crud
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+      - name: student-crud
+        image: myacr.azurecr.io/student-crud:v1
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: DATABASE_URL
