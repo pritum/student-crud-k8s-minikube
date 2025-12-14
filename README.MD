@@ -18,6 +18,7 @@ kubectl exec -it redis-67f77d7484-pk8mn  -- redis-cli
 kubectl create deployment redis --image=redis:7
 kubectl expose deployment redis --port=6379 --name=redis
 
-
+### Gives details info about pods
+kubectl describe pod student-crud-6f5f6f6b84-ddhmb
 ------------------
 git remote add origin https://github.com/pritum/student-crud-k8s-minikube.git
